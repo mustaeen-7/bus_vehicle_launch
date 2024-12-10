@@ -1,0 +1,102 @@
+<!--------------------            FOR LEXUS  ------------------------ -->
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- load parameter -->
+  <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find sample_vehicle_description)/config/vehicle_info.param.yaml')}"/>
+
+  <!-- vehicle body -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="${pi/2.0} 0 ${pi}"/>
+      <geometry>
+        <mesh filename="package://sample_vehicle_description/mesh/lexus.dae" scale="1 1 1"/>        
+      </geometry>
+    </visual>
+  </link>
+</robot>
+
+<!--------------------            END LEXUS  ------------------------ -->
+
+
+<!--------------------            FOR OPEN JEEP ------------------------ -->
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- load parameter -->
+  <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find sample_vehicle_description)/config/vehicle_info.param.yaml')}"/>
+
+  <!-- vehicle body -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sample_vehicle_description/mesh/open_jeep.dae" scale="0.006 0.006 0.006"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
+<!----                 END-OPEN-JEEP     ---------->       
+
+
+<!--------------------            FOR AUDI ------------------------ -->
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- load parameter -->
+  <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find sample_vehicle_description)/config/vehicle_info.param.yaml')}"/>
+
+  <!-- vehicle body -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="0 0 ${pi/2.0}"/>
+      <geometry>
+        <mesh filename="package://sample_vehicle_description/mesh/audi.dae" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </visual>
+  </link>
+</robot> 
+
+<!----                 END OF AUDI     ----------> 
+
+<!--------------------            FOR TRUCK2 ------------------------ -->
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- load parameter -->
+  <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find sample_vehicle_description)/config/vehicle_info.param.yaml')}"/>
+
+  <!-- vehicle body -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="0 0 ${pi/2.0}"/>
+      <geometry>
+        <mesh filename="package://sample_vehicle_description/mesh/truck2.dae" scale="5 5 5"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
+
+<!----                 END OF TRUCK2     ---------->
+
+
+
+
+<!--------------------            FOR load truck ------------------------ -->
+
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- load parameter -->
+  <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find sample_vehicle_description)/config/vehicle_info.param.yaml')}"/>
+
+  <!-- vehicle body -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="0 0 ${pi/2.0}"/>
+      <geometry>
+        <mesh filename="package://sample_vehicle_description/mesh/load_truck.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
+
+<!----                 END OF load truck     ---------->
+
+
+
